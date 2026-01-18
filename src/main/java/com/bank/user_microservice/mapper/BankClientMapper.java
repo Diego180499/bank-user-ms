@@ -23,4 +23,14 @@ public interface BankClientMapper {
 
 
 
+    @Mapping(target = "dpi", source = "dpi")
+    @Mapping(target = "lastname", source = "lastName")
+    @Mapping(target = "name", source = "name")
+    @Mapping(target = "email", source = "email")
+    @Mapping(target = "phone", source = "phone")
+    BankClient toBankClientEntity(BankClientDto bankClientDto);
+    List<BankClient> toBankClientEntity(List<BankClientDto> bankClientDtoList);
+
+
+
 }
