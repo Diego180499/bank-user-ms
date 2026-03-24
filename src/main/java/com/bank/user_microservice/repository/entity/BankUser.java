@@ -19,6 +19,9 @@ public class BankUser {
     @Column(name = "password_hash")
     private String passwordHash;
 
+    @Column(name = "2_fa")
+    private Boolean twoFA;
+
     @OneToOne
     @JoinColumn(name = "client_dpi",referencedColumnName = "dpi")
     private BankClient bankClient;

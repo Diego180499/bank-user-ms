@@ -29,8 +29,12 @@ public class BankClientService {
     }
 
 
-    public BankClientDto getBankClient(String dpi){
-        return bankClientRepository.getBankClientDto(dpi);
+    public BankClientDto getByDpi(String dpi){
+        return bankClientRepository.getBankClietByDpi(dpi);
+    }
+
+    public void createAccount(){
+        
     }
 
     public List<BankClientDto> getAllBankClient(){

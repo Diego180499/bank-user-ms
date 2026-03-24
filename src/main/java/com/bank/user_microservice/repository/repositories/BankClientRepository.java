@@ -26,7 +26,7 @@ public class BankClientRepository {
 
     public BankClient saveBankClient(BankClient bankClient){
         try{
-            if(!bankClientCrud.findById(bankClient.getDpi()).isEmpty()){
+            if(bankClientCrud.findById(bankClient.getDpi()).isPresent()){
                 throw new BusinessException(HttpStatus.BAD_REQUEST,"Un usuario con este DPI ya ha sido registrado.");
             }
             return bankClientCrud.save(bankClient);
@@ -35,13 +35,13 @@ public class BankClientRepository {
         }
     }
 
-    public BankClientDto getBankClientDto(String dpi){
+
+    public BankClientDto getBankClietByDpi(String dpi){
+
         Optional<BankClient> bankClient = bankClientCrud.findById(dpi);
 
         if(bankClient.isEmpty()){
-            //todo gestionar excepciones
-            log.info("Error en la busqueda del cliente");
-            return null;
+            throw new BusinessException(HttpStatus.NOT_FOUND,"El usuario no ha sido encontrado");
         }
 
         return mapper.toDto(bankClient.get());
