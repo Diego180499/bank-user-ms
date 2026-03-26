@@ -9,8 +9,4 @@ import java.util.Optional;
 @Repository
 public interface BankClientCrud extends JpaRepository<BankClient, String> {
 
-
-
-    //Optional<BankClient> getBankClientByUsernameAndPassword();
-
 }

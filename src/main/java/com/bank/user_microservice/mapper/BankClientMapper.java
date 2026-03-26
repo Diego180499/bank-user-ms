@@ -2,7 +2,9 @@ package com.bank.user_microservice.mapper;
 
 
 import com.bank.user_microservice.dto.request.BankClientDto;
+import com.bank.user_microservice.dto.request.BankUserDto;
 import com.bank.user_microservice.repository.entity.BankClient;
+import com.bank.user_microservice.repository.entity.BankUser;
 import jdk.dynalink.linker.LinkerServices;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

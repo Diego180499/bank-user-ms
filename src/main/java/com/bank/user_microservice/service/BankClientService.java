@@ -5,9 +5,9 @@ import com.bank.user_microservice.dto.response.ResponseSuccessfullyDto;
 import com.bank.user_microservice.mapper.BankClientMapper;
 import com.bank.user_microservice.repository.entity.BankClient;
 import com.bank.user_microservice.repository.repositories.BankClientRepository;
+import com.bank.user_microservice.repository.repositories.BankUserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.List;
 public class BankClientService {
 
     private final BankClientRepository bankClientRepository;
-
+    private final BankUserRepository bankUserRepository;
     private final BankClientMapper bankClientMapper;
 
 
@@ -31,10 +31,6 @@ public class BankClientService {
 
     public BankClientDto getByDpi(String dpi){
         return bankClientRepository.getBankClietByDpi(dpi);
-    }
-
-    public void createAccount(){
-        
     }
 
     public List<BankClientDto> getAllBankClient(){
