@@ -1,4 +1,4 @@
-package com.bank.user_microservice.repository.entity;
+package com.bank.user_microservice.domain.entity;
 
 
 import jakarta.persistence.*;
@@ -22,12 +22,6 @@ public class UserSession {
 
     @Column(name = "session_id",length = 255)
     private String sessionId;
-
-    @Column(name = "code_generation_date")
-    private LocalDateTime codeGenerationDate;
-
-    @Column(name = "code_expiration_date")
-    private LocalDateTime codeExpirationDate;
 
     @Column(name = "session_generation_date")
     private LocalDateTime sessionGenerationDate;
