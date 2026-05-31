@@ -1,10 +1,10 @@
-package com.bank.user_microservice.repository.repositories;
+package com.bank.user_microservice.domain.repositories;
 
 import com.bank.user_microservice.dto.request.BankClientDto;
 import com.bank.user_microservice.error.BusinessException;
 import com.bank.user_microservice.mapper.BankClientMapper;
-import com.bank.user_microservice.repository.crud.BankClientCrud;
-import com.bank.user_microservice.repository.entity.BankClient;
+import com.bank.user_microservice.domain.crud.BankClientCrud;
+import com.bank.user_microservice.domain.entity.BankClient;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

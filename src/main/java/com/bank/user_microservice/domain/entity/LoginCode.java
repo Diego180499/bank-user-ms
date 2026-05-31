@@ -1,4 +1,4 @@
-package com.bank.user_microservice.repository.entity;
+package com.bank.user_microservice.domain.entity;
 
 
 import jakarta.persistence.*;
