@@ -2,6 +2,7 @@ package com.bank.user_microservice.mapper;
 
 
 import com.bank.user_microservice.dto.request.BankClientDto;
+import com.bank.user_microservice.dto.response.CreateClientDto;
 import com.bank.user_microservice.domain.entity.BankClient;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -30,6 +31,9 @@ public interface BankClientMapper {
     BankClient toBankClientEntity(BankClientDto bankClientDto);
     List<BankClient> toBankClientEntity(List<BankClientDto> bankClientDtoList);
 
-
+    @Mapping(source = "dpi", target = "dpi")
+    @Mapping(source = "name", target = "name")
+    @Mapping(source = "lastname", target = "lastName")
+    CreateClientDto toCreateClientDto(BankClient bankClient);
 
 }

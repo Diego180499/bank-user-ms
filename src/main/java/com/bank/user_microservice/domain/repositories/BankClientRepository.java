@@ -36,7 +36,7 @@ public class BankClientRepository {
     }
 
 
-    public BankClientDto getBankClietByDpi(String dpi){
+    public BankClientDto getBankClientByDpi(String dpi){
 
         Optional<BankClient> bankClient = bankClientCrud.findById(dpi);
 
